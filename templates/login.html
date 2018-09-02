@@ -1,0 +1,24 @@
+<html>
+<head>
+ <!--meta charset="utf-8"/-->
+<title>Login | PicAttic</title>
+    <link rel="stylesheet" type="text/css" href="static/css/loginstyle.css">
+<body>
+
+<form method=POST action="{{ url_for('login') }}">      <!--just added for post method-->
+    
+    <div class="loginbox">
+        <h1> </h1>
+        <form>
+            <input type="text" name="username" placeholder="Enter Username">
+            <input type="password" name="pass" placeholder="Enter Password">
+            <input type="submit" name="" value="Login">
+            <br><a href="{{ url_for('login') }}">Forgot password?</a><br>
+            <a href="{{ url_for('signup') }}" > Haven't signed up yet?</a>
+        </form>
+        
+    </div>
+
+</body>
+</head>
+</html>
