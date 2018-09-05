@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up | PicAttic</title>
+  
+  
+  
+      <style>
+      @import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+body{
+	margin: 0;
+	padding: 0;
+	background: #fff;
+
+	color: #fff;
+	font-family: 'Exo',sans-serif;
+	font-size: 12px;
+}
+
+.h1 
+{
+font-family: 'Exo',sans-serif;
+}
+
+.body{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: auto;
+	height: auto;
+	background-image: url(static/img/signupbackground.jpg);
+	background-size: cover;
+		z-index: 0;
+}
+
+.grad{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	z-index: 1;
+	opacity: 0.8;
+}
+
+.header{
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 255px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200;
+}
+
+.header div span{
+	color: #5379fa !important;
+}
+
+.signup{
+	position: fixed;
+	top: calc(6% - 30px);
+	left: calc(40% - 40px);
+	height: 150px;
+	width: 550px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.signup input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.signup input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.signup input[type=button]{
+	width: 260px;
+	height: 35px;
+	background: green;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: white;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.signup input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.signup input[type=button]:active{
+	opacity: 0.6;
+}
+
+.signup input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.signup input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.signup input[type=button]:focus{
+	outline: none;
+}
+
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+/* Customize the label (the container) */
+.container {
+  display: inline-block;
+  list-style: inline;
+  position: relative;
+  right:20%;
+    margin-top: 15px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Exo',sans-serif;
+}
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+<form method=POST action="{{ url_for('signup') }}"> <!--just added-->
+
+  <div class="body"></div>
+		<div class="grad"></div><br>
+		<div class="signup">
+			<h1> Sign Up for a Course</h1>
+				<div class="container">
+				<p>Instrument you're interested in learning:</p>
+  <input type="radio" name="instrument" value="Guitar" checked> Guitar
+  <input type="radio" name="instrument" value="Keyboard"> Keyboard
+  <input type="radio" name="instrument" value="Saxophone"> Saxophone 
+  <input type="radio" name="instrument" value="Violin"> Violin
+  <input type="radio" name="instrument" value="Drums"> Drums
+  <input type="radio" name="instrument" value="Bass">  Bass
+    </div>
+      <div class="container">
+				<p>Course:</p>
+  <input type="radio" name="coursed" value="CrashCourse" checked> Crash Course
+  <input type="radio" name="coursed" value="LongTerm"> Long Term
+  <input type="radio" name="course" value="LCM"> LCM Exam Prep
+  <input type="radio" name="course" value="Trinity"> Trinity Exam Prep<br>
+  <input type="radio" name="course" value="ABRSM"> ABRSM Exam Prep<br><br>
+      </div>
+				<input type="text" placeholder="email" name="email"><br>
+				<input type="text" placeholder="phone number" name="phone"><br>
+				<input type="text" placeholder="username" name="username"><br>
+				<input type="password" placeholder="password" name="password"><br>
+				<input type="password" placeholder=" repeat password" name="password"><br>
+			
+
+			<input type="submit" value="Sign Up">
+		</div>
+  
+
+</body>
+
+</html>
